@@ -1,0 +1,20 @@
+19:40:32.260 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @15695ms to org.eclipse.jetty.util.log.Slf4jLog
+19:40:32.573 [main] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_181-b13
+19:40:32.631 [main] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@5c1d1aa6{/,null,AVAILABLE}
+19:40:32.663 [main] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@e8f7aa3{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+19:40:32.663 [main] INFO  org.eclipse.jetty.server.Server  - Started @16112ms
+19:41:28.040 [qtp1981046521-18] INFO  io.pedestal.http  - {:msg "GET /", :line 80}
+19:41:28.250 [qtp1981046521-13] INFO  io.pedestal.http  - {:msg "GET /favicon.ico", :line 80}
+19:41:32.811 [qtp1981046521-16] INFO  io.pedestal.http  - {:msg "GET /about", :line 80}
+19:41:32.980 [qtp1981046521-17] INFO  io.pedestal.http  - {:msg "GET /favicon.ico", :line 80}
+19:43:09.004 [main] INFO  org.eclipse.jetty.util.log  - Logging initialized @14203ms to org.eclipse.jetty.util.log.Slf4jLog
+19:47:21.894 [nRepl-session-c8f21bd8-5d28-47fe-9f67-2c9dfd219994] INFO  org.eclipse.jetty.server.Server  - jetty-9.4.18.v20190429; built: 2019-04-29T20:42:08.989Z; git: e1bc35120a6617ee3df052294e433f3a25ce7097; jvm 1.8.0_181-b13
+19:47:21.941 [nRepl-session-c8f21bd8-5d28-47fe-9f67-2c9dfd219994] INFO  o.e.j.server.handler.ContextHandler  - Started o.e.j.s.ServletContextHandler@64123aba{/,null,AVAILABLE}
+19:47:21.979 [nRepl-session-c8f21bd8-5d28-47fe-9f67-2c9dfd219994] INFO  o.e.jetty.server.AbstractConnector  - Started ServerConnector@17be07e5{HTTP/1.1,[http/1.1, h2c]}{localhost:8080}
+19:47:21.979 [nRepl-session-c8f21bd8-5d28-47fe-9f67-2c9dfd219994] INFO  org.eclipse.jetty.server.Server  - Started @267187ms
+19:47:44.941 [qtp1735357656-37] INFO  io.pedestal.http  - {:msg "GET /", :line 80}
+19:47:44.957 [qtp1735357656-37] INFO  io.pedestal.http.cors  - {:msg "cors request processing", :origin "", :allowed true, :line 84}
+19:47:44.972 [qtp1735357656-37] INFO  io.pedestal.http.cors  - {:msg "cors response processing", :cors-headers {"Access-Control-Allow-Origin" "", "Access-Control-Allow-Credentials" "true", "Access-Control-Expose-Headers" "Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options, X-Xss-Protection, X-Download-Options, X-Permitted-Cross-Domain-Policies, Content-Security-Policy, Content-Type"}, :line 111}
+19:47:45.176 [qtp1735357656-34] INFO  io.pedestal.http  - {:msg "GET /favicon.ico", :line 80}
+19:47:45.176 [qtp1735357656-34] INFO  io.pedestal.http.cors  - {:msg "cors request processing", :origin "", :allowed true, :line 84}
+19:47:45.192 [qtp1735357656-34] INFO  io.pedestal.http.cors  - {:msg "cors response processing", :cors-headers {"Access-Control-Allow-Origin" "", "Access-Control-Allow-Credentials" "true", "Access-Control-Expose-Headers" ""}, :line 111}
