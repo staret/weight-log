@@ -28,6 +28,13 @@
   [request]
   (ring-resp/response "Hello World!"))
 
+(defn debug-page
+  [request]
+  (ring-resp/response
+   (cheshire.core/generate-string
+    (select-keys request
+                 [:params :path-params :query-params :form-params])))
+
 ;; Defines "/" and "/about" routes with their associated :get handlers.
 ;; The interceptors defined after the verb map (e.g., {:get home-page}
 ;; apply to / and its children (/about).
@@ -38,6 +45,7 @@
               ["/measurements" :post
                (conj common-interceptors `inspect-payload `create-measurement)]
               ["/about" :get (conj common-interceptors `about-page)]})
+
 
 ;; Map-based routes
 ;(def routes `{"/" {:interceptors [(body-params/body-params) http/html-body]
