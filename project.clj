@@ -20,7 +20,7 @@
   :resource-paths ["config", "resources"]
   ;; If you use HTTP/2 or ALPN, use the java-agent to pull in the correct alpn-boot dependency
   ;:java-agents [[org.mortbay.jetty.alpn/jetty-alpn-agent "2.0.5"]]
-  :profiles {:dev {:aliases {"run-dev" ["trampoline" "run" "-m" "weight-service.server/run-dev"]}
+  :profiles {:dev {:aliases {"run-dev" ["trampoline" "run" "-m" "weight.server/run-dev"]}
                    :dependencies [[io.pedestal/pedestal.service-tools "0.5.7"]]}
-             :uberjar {:aot [weight-service.server]}}
-  :main ^{:skip-aot true} weight-service.server)
+             :uberjar {:aot [weight.server]}}
+  :main ^{:skip-aot true} weight.server)

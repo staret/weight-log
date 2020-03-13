@@ -1,4 +1,4 @@
-(ns weight-service.service
+(ns weight.service
   (:require [io.pedestal.http :as http]
             [io.pedestal.http.route :as route]
             [io.pedestal.http.body-params :as body-params]
@@ -9,6 +9,20 @@
   (ring-resp/response (format "Clojure %s - served from %s"
                               (clojure-version)
                               (route/url-for ::about-page))))
+
+(defn create-measurement
+  [request]
+  (ring-resp/response (str "Description: " (get-in request [:json-params :description]))))
+
+(def inspect-payload
+  {:name ::inspect-payload
+   :enter
+   (fn [context]
+     (update-in context [:request :json-params :description] clojure.string/upper-case))
+   :leave
+   (fn [context] (update-in context [:response :body]
+                            #(str % "Ciao!" )))})
+
 
 (defn home-page
   [request]
@@ -21,6 +35,8 @@
 
 ;; Tabular routes
 (def routes #{["/" :get (conj common-interceptors `home-page)]
+              ["/measurements" :post
+               (conj common-interceptors `inspect-payload `create-measurement)]
               ["/about" :get (conj common-interceptors `about-page)]})
 
 ;; Map-based routes
@@ -35,7 +51,7 @@
 ;      ["/about" {:get about-page}]]]])
 
 
-;; Consumed by weight-service.server/create-server
+;; Consumed by weight.server/create-server
 ;; See http/default-interceptors for additional options you can configure
 (def service {:env :prod
               ;; You can bring your own non-default interceptors. Make

@@ -1,8 +1,8 @@
-(ns weight-service.server
+(ns weight.server
   (:gen-class) ; for -main method in uberjar
   (:require [io.pedestal.http :as server]
             [io.pedestal.http.route :as route]
-            [weight-service.service :as service]))
+            [weight.service :as service]))
 
 ;; This is an adapted service map, that can be started and stopped
 ;; From the REPL you can call server/start and server/stop on this service
